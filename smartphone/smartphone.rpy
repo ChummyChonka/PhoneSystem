@@ -1,62 +1,11 @@
 
 default smartphone.version = "1.0"
 
-default smartphone.config = {
-    "smartphone_folder" : "images/smartphone/",
-    #"base_folder" : "images/smartphone/base/",
-    # "wallpaper_folder" : "images/smartphone/wallpaper/",
-    # "notificationbar_folder" : "images/smartphone/base/notificationbar/",
-    # "msgboxes_folder" : "images/smartphone/base/msgboxes/",
-    # "photos_folder" : "images/smartphone/photos/",
-    # "thumbnails_folder" : "images/smartphone/photos/thumbnails/",
-
-    # "messages_folder" : "images/smartphone/apps/messages/",
-    # "gallery_folder" : "images/smartphone/apps/gallery/",
-    # "guide_folder" : "images/smartphone/apps/gallery/",
-    # "settings_folder" : "images/smartphone/apps/settings/",
-
-    "music_folders" : ["audio/music/kevinmacleod/", "audio/music/freepd/"],
-    "music_file_ending" : ".ogg",
-
-    "wallpaper" : ["black", "frog", "jessica_nude01", "jessica_nude02", "sarah01", "aster_nude01", "laura_pool01", "patricia_lingerie01","patricia_lingerie02"],
-    "current_bg" : "frog",
-    "photos" : {
-        "black" : {"vertical" : False},
-        "frog" : {"vertical" : False}
-    },
-
-    "msg_their_box" : "phonemsg32",
-    "msg_your_box" : "phonemsg33",
-    "date_divider_bar" : True,
-    "date_divider_upper" : False,
-    "date_divider_pos" : "center",
-
-    "time_is_pm" : True,
-    "clock24hours" : True,
-
-    "overlay_opacity" : 0.8,
-
-    "contacts" : ["Sophia", "Aster", "Natalie", "Christopher"],
-}
-
 default smartphone.contacts = list()
 default smartphone.photos = dict()
 default smartphone.wallpaper = None
-
-# default smartphone.backgrounds = ["black", "frog", "jessica_nude01", "jessica_nude02", "sarah01", "aster_nude01", "laura_pool01", "patricia_lingerie01", "patricia_lingerie02"]
-# default smartphone.current_bg = "frog"
-
-#default smartphone.msg_age = 0
-#default smartphone.msg_their_box = "images/smartphone/msgboxes/phonemsg32.webp"
-#default smartphone.msg_your_box = "images/smartphone/msgboxes/phonemsg33.webp"
-#default smartphone.date_divider_bar = True
-#default smartphone.date_divider_upper = False
-#default smartphone.date_divider_pos = "center"
-
 default smartphone.battery_level = 90
 default smartphone.time = "14:12"
-#default smartphone.time_is_pm = True
-#default smartphone.clock24hours = True
 
 default smartphone.enabled = False
 
@@ -64,21 +13,15 @@ default smartphone.is_ringing = False
 default smartphone.notification = False
 
 default smartphone.content_stack = ["smartphone_apps_new"]
-#default smartphone.photos = ["black", "frog"]
 
 default apps = load_apps()
 
-# default smartphone.overlay_opacity = 0.8
 default smartphone.overlay_app_opacity = 0.0
 
 default smartphone.use_old_logos = False
 
 default smartphone.hide_lust_horny_icons = False
 
-
-# #only contacts are displayed in smartphone
-# default smartphone.contacts = ["Sophia", "Aster", "Natalie", "Christopher"]
-# default smartphone.contacts = ["Sophia", "Aster", "Natalie", "Christopher"]
 
 
 ################
