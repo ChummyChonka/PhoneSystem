@@ -1,0 +1,11 @@
+
+
+# little script I use to update my game(s) from this repo
+update_games.sh
+
+# vscode nonsense
+*.json
+
+# exclude compiled rpyc files
+*.rpyc
+
