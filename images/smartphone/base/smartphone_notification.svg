@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   style="height: 512px; width: 512px;"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="smartphone.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.2265625"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-width="2560"
+     inkscape:window-height="1368"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <path
+     d="M 129.1614,24.263158 V 493.22807 H 389.67719 V 24.263158 Z"
+     class=""
+     fill="#ffffff"
+     fill-opacity="1"
+     id="path1-3"
+     style="fill:#000000;stroke-width:1.05583" />
+  <g
+     class=""
+     style=""
+     transform="translate(0,0)"
+     id="g5">
+    <g
+       id="g4"
+       style="display:inline">
+      <path
+         d="m 134.5,30.5 v 451 h 243 v -451 z"
+         class=""
+         fill="#ffffff"
+         fill-opacity="1"
+         id="path1" />
+      <path
+         d="m 235.18,50.5 h 41.6 c 6.158,0 10.007,6.667 6.928,12 -1.429,2.475 -4.07,4 -6.928,4 h -41.6 c -6.158,0 -10.007,-6.667 -6.928,-12 1.429,-2.475 4.07,-4 6.928,-4 z"
+         class=""
+         fill="#000000"
+         fill-opacity="1"
+         id="path2" />
+      <path
+         d="m 255.5,471.01 c -14.826,0 -24.093,-16.05 -16.68,-28.89 7.414,-12.84 25.946,-12.84 33.36,0 1.69,2.928 2.58,6.249 2.58,9.63 0,10.637 -8.623,19.26 -19.26,19.26 z"
+         class=""
+         fill="#000000"
+         fill-opacity="1"
+         id="path3" />
+      <path
+         d="m 360.5,426.5 h -211 v -343 h 211 z"
+         class="selected"
+         fill="#e06666"
+         fill-opacity="1"
+         id="path4" />
+    </g>
+  </g>
+</svg>
