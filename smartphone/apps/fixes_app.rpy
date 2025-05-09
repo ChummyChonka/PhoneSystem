@@ -143,6 +143,10 @@ screen autofixes():
                     size 80
                     xalign 1.0
 
+                text ("PhoneSystem: {u}v" + smartphone.version) + "{/u}":
+                    size 80
+                    xalign 1.0
+
         text bug_report_notice:
             color "#f37cf3"
 
