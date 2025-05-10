@@ -60,7 +60,9 @@ screen guide():
                     at phone_button_zoom
                     xalign 0.3
                     if(actualgame.guide_selected_quest > 0):
-                        auto base_folder + "arrow_left_simple_%s.webp"
+                        #auto base_folder + "arrow_left_simple_%s.webp"
+                        idle Image(base_folder + "arrow_left_simple_idle.svg")
+                        hover Image(base_folder + "arrow_left_simple_hover.svg")
                         action Function(set_guide_quest_number, increase=False)
                     else:
                         idle base_folder + "arrow_simple_empty.webp"
@@ -80,7 +82,9 @@ screen guide():
                     at phone_button_zoom
                     xalign 0.7
                     if enable_guide_forward_arrow():
-                        auto base_folder + "arrow_right_simple_%s.webp"
+                        #auto base_folder + "arrow_right_simple_%s.webp"
+                        idle Image(base_folder + "arrow_right_simple_idle.svg")
+                        hover Image(base_folder + "arrow_right_simple_hover.svg")
                         action Function(set_guide_quest_number, increase=True)
                     else:
                         idle base_folder + "arrow_simple_empty.webp"

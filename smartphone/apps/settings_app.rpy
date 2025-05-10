@@ -45,43 +45,46 @@ screen settings():
                 null width 40
                 if(persistent.quickmenuxalign == 0.0):
                     imagebutton:
-                        idle base_folder + "align_left_active_idle.webp"
-                        #hover "images/smartphone/align_left_hover.webp"
+                        #idle base_folder + "align_left_active_idle.webp"
+                        idle Image(base_folder + "align_left_active_idle.svg")
                         at settingszoom_small
                         mouse "default"
                         action NullAction()
-                        #action SetVariable("persistent.quickmenuxalign", 0.0)
                 else:
                     imagebutton:
-                        auto base_folder + "align_left_%s.webp"
+                        #auto base_folder + "align_left_%s.webp"
+                        idle Image(base_folder + "align_left_idle.svg")
+                        hover Image(base_folder + "align_left_hover.svg")
                         at settingszoom_small
                         action SetVariable("persistent.quickmenuxalign", 0.0)
 
                 if(persistent.quickmenuxalign == 0.5):
                     imagebutton:
-                        idle base_folder + "align_center_active_idle.webp"
-                        #hover "images/smartphone/align_center_hover.webp"
+                        idle Image(base_folder + "align_center_active_idle.svg")
+                        #idle base_folder + "align_center_active_idle.webp"
                         at settingszoom_small
                         mouse "default"
-                        #action SetVariable("persistent.quickmenuxalign", 0.5)
                         action NullAction()
                 else:
                     imagebutton:
-                        auto base_folder + "align_center_%s.webp"
+                        #auto base_folder + "align_center_%s.webp"
+                        idle Image(base_folder + "align_center_idle.svg")
+                        hover Image(base_folder + "align_center_hover.svg")
                         at settingszoom_small
                         action SetVariable("persistent.quickmenuxalign", 0.5)
 
                 if(persistent.quickmenuxalign == 1.0):
                     imagebutton:
-                        idle base_folder + "align_right_active_idle.webp"
-                        #hover "images/smartphone/align_right_hover.webp"
+                        #idle base_folder + "align_right_active_idle.webp"
+                        idle Image(base_folder + "align_right_active_idle.svg")
                         at settingszoom_small
                         mouse "default"
-                        #action SetVariable("persistent.quickmenuxalign", 1.0)
                         action NullAction()
                 else:
                     imagebutton:
-                        auto base_folder + "align_right_%s.webp"
+                        #auto base_folder + "align_right_%s.webp"
+                        idle Image(base_folder + "align_right_idle.svg")
+                        hover Image(base_folder + "align_right_hover.svg")
                         at settingszoom_small
                         action SetVariable("persistent.quickmenuxalign", 1.0)
 
