@@ -1,5 +1,5 @@
 
-default smartphone.version = "1.0"
+default smartphone.version = "1.0.1"
 
 default smartphone.contacts = list()
 default smartphone.photos = dict()
@@ -21,6 +21,9 @@ default smartphone.overlay_app_opacity = 0.0
 default smartphone.use_old_logos = False
 
 default smartphone.hide_lust_horny_icons = False
+
+default smartphone.cheats_categories = ["Relationships", "Stats", "Uni"]
+default smartphone.cheats_category = None
 
 
 
@@ -186,6 +189,8 @@ screen smartphone_apps_new():
     grid 5 3 at phone_content_apps:
         #spacing 25
         for app in store.apps:
+            if(app.name == "cheats") and (not renpy.has_label("start_select")):
+                continue
             if(not app.disabled and app.function==AppDo.PUSH):
                 vbox:
                     #xsize 250

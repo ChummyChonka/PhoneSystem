@@ -41,6 +41,8 @@ style smartphone_button_text is smartphone_text:
     hover_color "#e06666"
     idle_color "#FFFFFF"
 
+style smartphone_label_text is label_text:
+    size 100
 
 style smartphone_textinput_button_text is smartphone_button_text:
     size 200
