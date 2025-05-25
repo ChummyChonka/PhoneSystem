@@ -4,6 +4,7 @@ init python:
     import os
     import xml.etree.ElementTree as ET
 
+
     #pressing square button
     def hide_all_phone_screens():
         store_msg_adjustment(smartphone.content_stack[len(smartphone.content_stack) - 1])
@@ -454,4 +455,98 @@ init python:
 
         return False
 
+
+    def load_apps() -> list:
+        return [
+            App("autofixes", "Fixes"),
+            App("cheats", "Cheats"),
+            App("contacts", "Contacts", disabled=True),
+            App("guide", "Guide"),
+            App("gallery", "Gallery"),
+            App("games", "Games", disabled=True),
+            App("messages", "Messages"),
+            App("music", "Music"),
+            App("renamer", "Renamer"),
+            App("settings", "Settings"),
+            App("stats", "Stats"),
+            App("wallpapers", "Wallpapers", disabled=True),
+
+            App("linktree", "Socials", url="https://linktr.ee/chummychonka"),
+            App("bluesky", "Bluesky", url="https://bsky.app/profile/chummychonka.bsky.social", disabled=True),
+            App("patreon", "Patreon", url="https://www.patreon.com/ChummyChonka", disabled=True),
+            App("discord", "Discord", url="https://discord.gg/JFVM553QDv", disabled=True),
+            App("itch", "Itch.io", url="https://chummychonka.itch.io/", disabled=True),
+            App("twitter", "X", url="https://x.com/ChummyChonka", disabled=True)
+        ]
+
+
+    def get_app_url(app_name:str) -> str:
+        for app in store.apps:
+            if(app.name == app_name):
+                return app.url
+        return ""
+
+
+    def get_app_icon(app:str, hovered=False, use_old_logo=False):
+        boxes_folder = "images/smartphone/base/msgboxes/"
+        logos_folder = "images/smartphone/base/logos/"
+        logos_folder_google = "images/smartphone/base/logos/google/"
+        size = 250
+        offset = 25
+        dpi_size = 700
+
+        if hovered:
+            size = 270
+            offset = 35
+
+        if use_old_logo:
+            if(app == "autofixes"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg11.webp"), (offset, offset), logos_folder + "logo_autofixes.webp")
+            elif(app == "cheats"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg26.webp"), (offset, offset), logos_folder + "logo_crown.webp")
+            elif(app == "guide"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg12.webp"), (offset, offset), logos_folder + "logo_guide.webp")
+            elif(app == "gallery"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg05.webp"), (offset, offset), logos_folder + "logo_gallery.webp")
+            elif(app == "messages"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg04.webp"), (offset, offset), logos_folder + "logo_messages.webp")
+            elif(app == "music"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg17.webp"), (offset, offset), logos_folder + "logo_music.webp")
+            elif(app == "renamer"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg08.webp"), (offset, offset), logos_folder + "logo_contacts.webp")
+            elif(app == "settings"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg10.webp"), (offset, offset), logos_folder + "logo_settings.webp")
+            elif(app == "stats"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg07.webp"), (offset, offset), logos_folder + "logo_stats.webp")
+            elif(app == "linktree"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg34.webp"), (offset, offset), logos_folder + "logo_linktree.webp")
+            else:
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg06.webp"), (offset, offset), logos_folder + "demo_logo.webp")
+
+        else:
+            offset = 38
+            if hovered:
+                offset += 10
+            if(app == "autofixes"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg11.webp"), (offset, offset), At(Image(logos_folder_google + "logo_autofixes.svg", dpi=dpi_size), dropshadow))
+            elif(app == "cheats"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg26.webp"), (offset, offset), At(Image(logos_folder_google + "logo_crown.svg", dpi=dpi_size), dropshadow))
+            elif(app == "guide"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg12.webp"), (offset, offset), At(Image(logos_folder_google + "logo_guide.svg", dpi=dpi_size), dropshadow))
+            elif(app == "gallery"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg21.webp"), (offset, offset), At(Image(logos_folder_google + "logo_gallery.svg", dpi=dpi_size), dropshadow))
+            elif(app == "messages"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg04.webp"), (offset, offset), At(Image(logos_folder_google + "logo_messages.svg", dpi=dpi_size), dropshadow))
+            elif(app == "music"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg17.webp"), (offset, offset), At(Image(logos_folder_google + "logo_music.svg", dpi=dpi_size), dropshadow))
+            elif(app == "renamer"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg08.webp"), (offset, offset), At(Image(logos_folder_google + "logo_contacts.svg", dpi=dpi_size), dropshadow))
+            elif(app == "settings"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg10.webp"), (offset, offset), At(Image(logos_folder_google + "logo_settings.svg", dpi=dpi_size), dropshadow))
+            elif(app == "stats"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg03.webp"), (offset, offset), At(Image(logos_folder_google + "logo_stats.svg", dpi=dpi_size), dropshadow))
+            elif(app == "linktree"):
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg34.webp"), (offset, offset), At(Image(logos_folder_google + "logo_rocket.svg", dpi=dpi_size), dropshadow))
+            else:
+                return Composite((size, size), (0,0), Frame(boxes_folder + "phonemsg06.webp"), (offset, offset), At(Image(logos_folder_google + "logo_unknown.svg", dpi=dpi_size), dropshadow))
 
