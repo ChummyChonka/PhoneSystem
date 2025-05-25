@@ -373,7 +373,9 @@ screen msg_chain():
                                     xmaximum 1250
 
                                     vbox:
-                                        if(not msg["image"] is None) and (("android" in config.variants) or (renpy.loadable(thumbnails_folder + "/" + msg["image"] + ".webp"))):
+                                        # works when game is run straight from renpy, not in release version though
+                                        #if(not msg["image"] is None) and (("android" in config.variants) or (renpy.loadable(thumbnails_folder + "/" + msg["image"] + ".webp"))):
+                                        if(not msg["image"] is None):
                                             hbox:
                                                 imagebutton:
                                                     padding (20,20)
