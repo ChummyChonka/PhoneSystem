@@ -217,10 +217,13 @@ screen app_settings():
                         cols 4
                         spacing 10
                         for app in store.apps:
-                            if(not app.disabled):
-                                imagebutton:
-                                    idle get_app_icon(app.name, use_old_logo=True)
-                                    action NullAction()
+                            if app.disabled:
+                                continue
+                            if(app.name == "cheats") and (not renpy.has_label("start_select")):
+                                continue
+                            imagebutton:
+                                idle get_app_icon(app.name, use_old_logo=True)
+                                action NullAction()
 
                     textbutton("Old Icons"):
                         xalign 0.5
@@ -237,10 +240,13 @@ screen app_settings():
                         cols 4
                         spacing 10
                         for app in store.apps:
-                            if(not app.disabled):
-                                imagebutton:
-                                    idle get_app_icon(app.name)
-                                    action NullAction()
+                            if app.disabled:
+                                continue
+                            if(app.name == "cheats") and (not renpy.has_label("start_select")):
+                                continue
+                            imagebutton:
+                                idle get_app_icon(app.name)
+                                action NullAction()
 
                     textbutton("New Icons"):
                         xalign 0.5
