@@ -30,7 +30,7 @@ screen stats():
                 hbox:
                     xalign 1.0
                     text _("$")
-                    text str(protagonist.get_stat(Stats.MONEY))
+                    text str(protag_get_stat(Stats.MONEY))
 
             null height 20
 
@@ -40,9 +40,9 @@ screen stats():
                 hbox:
                     xfill True
                     text _("Self-Confidence:")
-                    text "[protagonist.confidence]":
+                    text "[protag_get_stat(Stats.CONFIDENCE)]":
                         xalign 1.0
-                bar value StaticValue(value=protagonist.confidence, range=10)
+                bar value StaticValue(value=store.protagonist[Stats.CONFIDENCE], range=10)
 
             vbox:
                 spacing 10
@@ -50,9 +50,9 @@ screen stats():
                 hbox:
                     xfill True
                     text _("Fitness:")
-                    text "[protagonist.fitness]":
+                    text "[protag_get_stat(Stats.FITNESS)]":
                         xalign 1.0
-                bar value StaticValue(value=protagonist.fitness, range=10)
+                bar value StaticValue(value=store.protagonist[Stats.FITNESS], range=10)
 
             vbox:
                 spacing 10
@@ -60,9 +60,9 @@ screen stats():
                 hbox:
                     xfill True
                     text _("Lust Energy:")
-                    text str(protagonist.get_stat(Stats.LUST_ENERGY)):
+                    text str(protag_get_stat(Stats.LUST_ENERGY)):
                         xalign 1.0
-                bar value StaticValue(value=protagonist.get_stat(Stats.LUST_ENERGY), range=10)
+                bar value StaticValue(value=store.protagonist[Stats.LUST_ENERGY], range=10)
 
             vbox:
                 spacing 10
@@ -70,9 +70,9 @@ screen stats():
                 hbox:
                     xfill True
                     text _("Horniness:")
-                    text str(protagonist.get_stat(Stats.HORNY)):
+                    text str(protag_get_stat(Stats.HORNY)):
                         xalign 1.0
-                bar value StaticValue(value=protagonist.get_stat(Stats.HORNY), range=10)
+                bar value StaticValue(value=store.protagonist[Stats.HORNY], range=10)
 
             # vbox:
             #     spacing 10
@@ -80,9 +80,9 @@ screen stats():
             #     hbox:
             #         xfill True
             #         text _("Fighting Ability:")
-            #         text "[protagonist.fight]":
+            #         text "[protag_get_stat(Stats.FIGHT)":
             #             xalign 1.0
-            #     bar value StaticValue(value=protagonist.fight, range=10)
+            #     bar value StaticValue(value=store.protagonist[Stats.FIGHT], range=10)
 
 
     viewport at phone_content_wide_right:
