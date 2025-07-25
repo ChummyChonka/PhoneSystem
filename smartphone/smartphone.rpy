@@ -191,6 +191,8 @@ screen smartphone_apps_new():
         for app in store.apps:
             if(app.name == "cheats") and (not renpy.has_label("start_select")):
                 continue
+            if(app.name == "guide") and actualgame.story_mode:
+                continue
             if(not app.disabled and app.function==AppDo.PUSH):
                 vbox:
                     #xsize 250
