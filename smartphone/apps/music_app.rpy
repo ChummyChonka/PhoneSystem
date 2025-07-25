@@ -98,6 +98,9 @@ screen music():
                 vbox:
                     for song in gamemusic.get_all_songs():
                         textbutton gamemusic.get_song_title_only(song):
+                            if(gamemusic.currently_playing_short == gamemusic.get_song_title_only(song)):
+                                text_underline True
+                                text_color gui.hover_color
                             action Function(gamemusic.play_song, song)
                     #for location in gamemusic.per_location.keys():
                     #    textbutton get_song_title_from_path(gamemusic.per_location[location]):
