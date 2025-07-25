@@ -97,7 +97,7 @@ screen music():
                 draggable True
                 vbox:
                     for song in gamemusic.get_all_songs():
-                        textbutton song:
+                        textbutton gamemusic.get_song_title_only(song):
                             action Function(gamemusic.play_song, song)
                     #for location in gamemusic.per_location.keys():
                     #    textbutton get_song_title_from_path(gamemusic.per_location[location]):
