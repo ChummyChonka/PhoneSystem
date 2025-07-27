@@ -98,14 +98,11 @@ screen textinput(args):
     modal True
     style_prefix "smartphone_textinput"
     frame:
-        #background Frame("images/smartphone/msgboxes/phonemsg31.webp", 50,50)
         background Frame("gui/notify.png", 50,50)
         xminimum 2200
         xmaximum 3500
         yminimum 750
-        #ysize 750
         xalign 0.5
-        #yalign 0.5
         style "name_changer"
 
         has vbox:
@@ -113,19 +110,14 @@ screen textinput(args):
             xalign 0.5
             yalign 0.5
 
+            key ["K_RETURN", "K_KP_ENTER"] action [Function(person_update_display_name, args[0]), Hide("textinput")]
+
             hbox:
                 spacing 30
                 if(args[1] in ["name", "surname", "nickname"]):
                     text args[1].capitalize()
                     input:
-                        #value FieldInputValue(args[0], args[1])
                         value DictInputValue(people[args[0]], args[1])
-                # if(args[1] == "name"):
-                #     text "Name:"
-                # elif(args[1] == "surname"):
-                #     text "Surname:"
-                # elif(args[1] == "nickname"):
-                #     text "Nickname:"
                 elif(args[1] == "petname"):
                     text "Petname:"
                     input:
@@ -135,5 +127,5 @@ screen textinput(args):
 
             textbutton "Save":
                 xalign 0.5
-                action [Function(person_update_display_name, actualgame.renamer_person), Hide("textinput")]
+                action [Function(person_update_display_name, args[0]), Hide("textinput")]
 

@@ -1,5 +1,5 @@
 
-default smartphone.version = "1.0.2"
+default smartphone.version = "1.0.3"
 
 default smartphone.contacts = list()
 default smartphone.photos = dict()
